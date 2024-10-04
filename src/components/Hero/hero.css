@@ -17,6 +17,7 @@
   user-select: none;
   z-index: 2;
   mix-blend-mode: multiply;
+  padding: 0 1.5rem;
 }
 
 .hero-heading {
@@ -29,7 +30,7 @@
 }
 
 .hero-subheading {
-  font-size: clamp(1.1rem, 2.5vw + 0.1rem, 1.75rem);
+  font-size: clamp(1.15rem, 2.5vw + 0.1rem, 1.75rem);
   font-family: "Helvetica Regular";
   font-weight: 400;
   color: var(--color-light-text);

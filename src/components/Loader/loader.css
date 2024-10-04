@@ -15,7 +15,7 @@
   position: absolute;
   right: 9rem;
   bottom: 4rem;
-  font-size: clamp(2.75rem, 5vw + 0.3rem, 7rem);
+  font-size: clamp(3rem, 8vw + 0.3rem, 7rem);
   font-family: "Forum";
 }
 
@@ -64,9 +64,12 @@
   background-color: rgba(0, 0, 0, 0.35);
 }
 
-@media screen and (max-with: 425px) {
+@media screen and (max-width: 425px) {
   .loader-percentage {
-    right: 4rem;
-    bottom: 4rem;
+    right: unset;
+    bottom: unset;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }

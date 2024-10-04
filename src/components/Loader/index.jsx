@@ -22,7 +22,7 @@ const Loader = ({ setLoader }) => {
       promise = promise.then(() => {
         setPercentageText(percent);
         return new Promise((resolve) => {
-          setTimeout(resolve, 700);
+          setTimeout(resolve, 850);
         });
       });
     });
@@ -70,7 +70,7 @@ const Loader = ({ setLoader }) => {
             duration: 3,
             ease: "power4.inOut",
           },
-          "-=1.4"
+          "-=1.5"
         )
         .to(
           ".loader-container",
