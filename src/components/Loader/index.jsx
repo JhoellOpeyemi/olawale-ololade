@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import PropTypes from "prop-types";
 
-import { percentageArray, images } from "./utils";
+import { percentageArray, images, loadingAnimation } from "./utils";
 import "./loader.css";
 
 gsap.registerPlugin(useGSAP);
@@ -34,55 +34,7 @@ const Loader = ({ setLoader }) => {
 
   useGSAP(() => {
     if (percentageDone == true) {
-      tl.current = gsap
-        .timeline()
-        .to(".loader-percentage", { opacity: 0, duration: 0.3 })
-        .to(".row-1 .loader-image", {
-          left: 0,
-          duration: 2.5,
-          stagger: 0.2,
-          ease: "power4.inOut",
-        })
-        .to(
-          ".row-2 .loader-image",
-          {
-            left: 0,
-            duration: 2.5,
-            stagger: -0.2,
-            ease: "power4.inOut",
-          },
-          "-=3"
-        )
-        .to(
-          ".row-3 .loader-image",
-          {
-            left: 0,
-            duration: 2.5,
-            stagger: 0.2,
-            ease: "power4.inOut",
-          },
-          "-=3"
-        )
-        .to(
-          ".loader-container",
-          {
-            scale: 5,
-            duration: 3,
-            ease: "power4.inOut",
-          },
-          "-=1.5"
-        )
-        .to(
-          ".loader-container",
-          {
-            opacity: 0,
-            duration: 1,
-          },
-          "-=1"
-        )
-        .to(".loader-container", {
-          onUpdate: () => setLoader(false),
-        });
+      loadingAnimation(tl, setLoader);
     }
   }, [{ dependencies: [percentageDone], scope: loaderRef.current }]);
 

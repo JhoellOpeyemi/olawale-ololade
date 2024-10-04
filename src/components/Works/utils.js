@@ -1,3 +1,5 @@
+import gsap from "gsap";
+
 export const worksData = [
   {
     title: "Realms",
@@ -35,3 +37,51 @@ export const worksData = [
     pictures: 5,
   },
 ];
+
+export const worksReveal = (
+  tl,
+  ref,
+  workWrappers,
+  workTitles,
+  pictureNumbers
+) => {
+  gsap.set(".work-wrapper:not(:first-child)", {
+    clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+  });
+
+  tl.current = gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: ref.current,
+        start: "top top",
+        end: "+=4500vh",
+        pin: true,
+        pinSpacing: true,
+        scrub: true,
+      },
+    })
+    .to(workWrappers, {
+      clipPath: "polygon(0% 0%, 100% 0%, 1000% 100%, 0% 100%)",
+      stagger: 2,
+      duration: 1.5,
+      ease: "power1.in",
+    })
+    .to(
+      workTitles,
+      {
+        opacity: 1,
+        duration: 0.75,
+        stagger: 2,
+      },
+      "<=1"
+    )
+    .to(
+      pictureNumbers,
+      {
+        opacity: 1,
+        duration: 0.75,
+        stagger: 2,
+      },
+      "<"
+    );
+};

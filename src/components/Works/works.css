@@ -60,7 +60,7 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  font-size: clamp(1rem, 2vw + 0.1rem, 1.4rem);
+  font-size: clamp(1rem, 2vw + 0.1rem, 1.25rem);
   color: var(--color-light-text);
 }
 
@@ -135,7 +135,7 @@
   }
 
   .work-wrapper .progress {
-    bottom: 7.5%;
+    bottom: 7.2%;
     left: 0;
   }
 }

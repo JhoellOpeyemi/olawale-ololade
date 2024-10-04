@@ -14,7 +14,7 @@ const Nav = () => {
     window.onscroll = () => {
       let scrollTop = window.scrollY || document.documentElement.scrollTop;
 
-      if (scrollTop > 650) {
+      if (scrollTop > 550) {
         navRef.current.style.opacity = 0;
       } else {
         navRef.current.style.opacity = 1;

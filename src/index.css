@@ -73,7 +73,8 @@ a {
 }
 
 p {
-  line-height: 1.5;
+  line-height: 1.4;
+  font-size: clamp(var(--small-text), 2vw + 0.1rem, var(--big-text));
 }
 
 img {
@@ -83,6 +84,7 @@ img {
 }
 
 .container {
+  position: relative;
   width: 90%;
   max-width: 1440px;
   margin: 0 auto;
