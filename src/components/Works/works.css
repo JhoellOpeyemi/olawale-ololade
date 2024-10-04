@@ -1,0 +1,141 @@
+.works-section {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.works-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.work-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3.5rem;
+  background-color: var(--color-bg);
+}
+
+.title-n-progress {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 70vh;
+}
+
+.title-n-progress {
+  width: 28%;
+}
+
+.work-images-number {
+  width: 22%;
+}
+
+.work-text {
+  font-family: "Forum";
+  font-weight: 400;
+  opacity: 0;
+}
+
+.work-wrapper:first-child .work-text {
+  opacity: 1;
+}
+
+.work-title {
+  font-size: clamp(1.6rem, 3vw + 0.25rem, 2.5rem);
+  text-align: right;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.work-wrapper .progress {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: clamp(1rem, 2vw + 0.1rem, 1.4rem);
+  color: var(--color-light-text);
+}
+
+.work-images-number {
+  font-size: clamp(1.35rem, 3vw + 0.25rem, 2rem);
+}
+
+.work-image-wrapper {
+  position: relative;
+  width: 50%;
+  height: 70vh;
+  overflow: hidden;
+  flex: 1;
+}
+
+@media screen and (max-width: 950px) {
+  .work-wrapper {
+    width: 90%;
+  }
+
+  .title-n-progress {
+    width: 25%;
+  }
+
+  .work-images-number {
+    width: 23%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .work-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.75rem;
+  }
+
+  .work-image-wrapper {
+    width: 90%;
+    height: 65vh;
+    flex: unset;
+  }
+
+  .title-n-number {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+  }
+
+  .work-images-number {
+    width: fit-content;
+  }
+
+  .work-wrapper .progress {
+    position: absolute;
+    bottom: 8%;
+    left: 5%;
+    width: fit-content;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .work-image-wrapper {
+    width: 100%;
+    height: 70vh;
+  }
+
+  .title-n-number {
+    width: 100%;
+  }
+
+  .work-wrapper .progress {
+    bottom: 7.5%;
+    left: 0;
+  }
+}

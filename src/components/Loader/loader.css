@@ -1,0 +1,72 @@
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-loader-bg);
+  color: var(--color-bg);
+  z-index: 10;
+  user-select: none;
+  overflow: hidden;
+}
+
+.loader-percentage {
+  position: absolute;
+  right: 9rem;
+  bottom: 4rem;
+  font-size: clamp(2.75rem, 5vw + 0.3rem, 7rem);
+  font-family: "Forum";
+}
+
+.loader-images {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 0.5rem;
+}
+
+.row {
+  position: relative;
+  display: flex;
+  flex: 1;
+  gap: 0.5rem;
+  width: 100%;
+  height: 33%;
+  overflow: hidden;
+}
+
+.loader-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.row-1 .loader-image,
+.row-3 .loader-image {
+  left: 100%;
+}
+
+.row-2 .loader-image {
+  left: -100%;
+}
+
+.loader-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+@media screen and (max-with: 425px) {
+  .loader-percentage {
+    right: 4rem;
+    bottom: 4rem;
+  }
+}

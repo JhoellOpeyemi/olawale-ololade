@@ -1,0 +1,44 @@
+.nav {
+  position: fixed;
+  top: 2.5rem;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7.25rem;
+  z-index: 3;
+  color: var(--color-light-text);
+  transition: 0.5s;
+}
+
+.nav-link {
+  position: relative;
+  overflow: hidden;
+  font-size: clamp(var(--small-text), 2vw + 0.1rem, var(--medium-text));
+}
+
+.nav-link .visible {
+  position: relative;
+  pointer-events: none;
+}
+
+.nav-link .hidden {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  pointer-events: none;
+}
+
+.nav-link .visible span,
+.nav-link .hidden span {
+  display: inline-block;
+  position: relative;
+}
+
+@media screen and (max-width: 425px) {
+  .nav {
+    top: 3.5rem;
+    gap: 4rem;
+  }
+}
