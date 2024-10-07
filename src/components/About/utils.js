@@ -7,7 +7,6 @@ export const aboutReveal = (tl, ref) => {
         trigger: ref.current,
         start: "top top",
         end: "+=1500vh",
-        markers: true,
         scrub: true,
         pin: true,
         pinSpacing: true,

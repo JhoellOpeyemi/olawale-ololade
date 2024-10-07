@@ -1,13 +1,17 @@
-import AnimatedOutlet from "./components/AnimatedOutlet";
-import SmoothScroll from "./components/SmoothScroll";
+import { BrowserRouter } from "react-router-dom";
+
+import { WorksProvider } from "./context";
+import AnimatedRoutes from "./components/AnimatedRoutes";
 
 function App() {
   return (
-    <SmoothScroll>
+    <WorksProvider>
       <div className="container">
-        <AnimatedOutlet />
+        <BrowserRouter>
+          <AnimatedRoutes />
+        </BrowserRouter>
       </div>
-    </SmoothScroll>
+    </WorksProvider>
   );
 }
 

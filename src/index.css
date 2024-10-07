@@ -25,10 +25,10 @@
 :root {
   --small-text: 1rem;
   --medium-text: 1.15rem;
-  --big-text: 1.5rem;
+  --big-text: 1.3rem;
   --small-heading: 2.8rem;
   --medium-heading: 3.25rem;
-  --big-heading: 5rem;
+  --big-heading: 6rem;
   --color-bg: #fbfbfb;
   --color-text: #222;
   --color-light-text: #888;
@@ -70,11 +70,12 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
 
 p {
   line-height: 1.4;
-  font-size: clamp(var(--small-text), 2vw + 0.1rem, var(--big-text));
+  font-size: clamp(var(--small-text), 1.3vw + 0.1rem, var(--big-text));
 }
 
 img {
@@ -102,7 +103,5 @@ img {
 @media screen and (max-width: 950px) {
   .container {
     width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
   }
 }

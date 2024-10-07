@@ -5,30 +5,44 @@ import { useGSAP } from "@gsap/react";
 import { handleHover, handleLeave } from "./utils.js";
 
 import "./nav.css";
+import { useLenis } from "lenis/react";
+import { useLocation } from "react-router-dom";
 
 gsap.registerPlugin(useGSAP);
+
 const Nav = () => {
   const navRef = useRef();
+  const lenis = useLenis();
+  const { pathname } = useLocation();
+
+  const scrollToWork = () => {
+    lenis.scrollTo(690);
+  };
 
   useEffect(() => {
     window.onscroll = () => {
-      let scrollTop = window.scrollY || document.documentElement.scrollTop;
+      if (navRef.current !== null) {
+        let scrollTop = window.scrollY || document.documentElement.scrollTop;
 
-      if (scrollTop > 550) {
-        navRef.current.style.opacity = 0;
-      } else {
-        navRef.current.style.opacity = 1;
+        if (scrollTop > 550) {
+          navRef.current.style.opacity = 0;
+          navRef.current.style.visibility = "hidden";
+        } else {
+          navRef.current.style.opacity = 1;
+          navRef.current.style.visibility = "visible";
+        }
       }
     };
-  });
+  }, [pathname]);
 
   return (
     <nav className="nav" ref={navRef}>
       <a
-        href="#"
+        // href=""
         className="nav-link"
         onMouseOver={(e) => handleHover(e)}
         onMouseLeave={(e) => handleLeave(e)}
+        onClick={scrollToWork}
       >
         <span className="visible">
           <span>W</span>

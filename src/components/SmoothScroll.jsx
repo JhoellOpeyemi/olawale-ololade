@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const SmoothScroll = ({ children }) => {
   return (
-    <ReactLenis root options={{ duration: 2 }}>
+    <ReactLenis root options={{ lerp: 0.05 }}>
       {children}
     </ReactLenis>
   );

@@ -10,6 +10,7 @@ gsap.registerPlugin(useGSAP);
 
 const Hero = () => {
   const imageRef = useRef();
+  const heroRef = useRef();
 
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
@@ -30,7 +31,7 @@ const Hero = () => {
       });
     };
 
-    window.onmousemove = (e) => {
+    heroRef.current.onmousemove = (e) => {
       animate(e);
     };
   }, [x, y]);
@@ -63,7 +64,7 @@ const Hero = () => {
   }, [{ dependencies: [view] }]);
 
   return (
-    <div className="hero-container">
+    <div className="hero-container" ref={heroRef}>
       <div className="hero-text">
         <h1
           className="hero-heading"
