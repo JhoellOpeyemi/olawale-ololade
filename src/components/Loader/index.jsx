@@ -1,14 +1,15 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useContext } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import PropTypes from "prop-types";
 
 import { percentageArray, images, loadingAnimation } from "./utils";
 import "./loader.css";
+import { WorksContext } from "../../context";
 
 gsap.registerPlugin(useGSAP);
 
-const Loader = ({ setLoader }) => {
+const Loader = () => {
+  const { setLoader } = useContext(WorksContext);
   const [percentageText, setPercentageText] = useState(0);
   const [percentageDone, setPercentageDone] = useState(false);
 
@@ -78,10 +79,6 @@ const Loader = ({ setLoader }) => {
       </div>
     </div>
   );
-};
-
-Loader.propTypes = {
-  setLoader: PropTypes.func,
 };
 
 export default Loader;

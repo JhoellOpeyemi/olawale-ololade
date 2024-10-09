@@ -2,7 +2,7 @@ import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
-import { handleHover, handleLeave } from "./utils.js";
+import { handleHover, handleLeave } from "../../utils.js";
 
 import "./nav.css";
 import { useLenis } from "lenis/react";
@@ -16,7 +16,7 @@ const Nav = () => {
   const { pathname } = useLocation();
 
   const scrollToWork = () => {
-    lenis.scrollTo(690);
+    lenis.scrollTo("#work");
   };
 
   useEffect(() => {
@@ -38,7 +38,6 @@ const Nav = () => {
   return (
     <nav className="nav" ref={navRef}>
       <a
-        // href=""
         className="nav-link"
         onMouseOver={(e) => handleHover(e)}
         onMouseLeave={(e) => handleLeave(e)}

@@ -1,11 +1,23 @@
 .gallery-container {
   position: relative;
   width: 100%;
-  margin: 5rem auto 2.5rem;
+  margin: 0 auto;
+  padding: 5rem 0 2.5rem;
+}
+
+.back {
+  position: absolute;
+  top: 2.5rem;
+  left: 50%;
+  transform: translate(-50%);
+  display: inline-block;
+  color: var(--color-light-text);
 }
 
 .gallery-wrapper {
+  position: relative;
   width: 100%;
+  height: max-content;
   display: flex;
   flex-direction: column;
   gap: 4.5rem;
@@ -13,23 +25,25 @@
 
 .gallery-text {
   display: flex;
-  gap: 4.5rem;
+  gap: 5.5rem;
+  opacity: 0;
 }
 
 .gallery-text h2 {
-  font-size: 4rem;
+  font-size: clamp(3rem, 4vw + 0.5rem, 4.5rem);
   font-weight: 400;
   font-family: "Forum";
   text-transform: uppercase;
 }
 
 .gallery-text p {
-  margin-top: 5rem;
+  margin-top: 6rem;
 }
 
 .gallery-images-container {
+  position: relative;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   width: 100%;
   gap: 0.7rem;
 }
@@ -39,10 +53,44 @@
   aspect-ratio: 1 / 1.2;
   overflow: hidden;
   cursor: pointer;
+  clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+}
+
+.gallery-image {
+  pointer-events: none;
 }
 
 @media screen and (max-width: 950px) {
   .gallery-container {
     width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .gallery-container {
+    padding: 7rem 0 3rem;
+  }
+
+  .gallery-wrapper {
+    gap: 5rem;
+  }
+
+  .gallery-images-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .gallery-text {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .gallery-text p {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .gallery-images-container {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
   }
 }

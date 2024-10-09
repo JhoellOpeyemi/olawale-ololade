@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext } from "react";
 
 import Nav from "../components/Nav";
 import Hero from "../components/Hero";
@@ -6,14 +6,15 @@ import Works from "../components/Works";
 import About from "../components/About";
 import Loader from "../components/Loader";
 import AnimatedLayout from "../components/AnimatedLayout";
+import { WorksContext } from "../context";
 
 const Home = () => {
-  const [loader, setLoader] = useState(true);
+  const { loader } = useContext(WorksContext);
 
   return (
     <>
       {loader ? (
-        <Loader setLoader={setLoader} />
+        <Loader />
       ) : (
         <AnimatedLayout>
           <>

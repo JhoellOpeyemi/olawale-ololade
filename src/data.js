@@ -20,7 +20,7 @@ export const data = [
     id: 2,
     title: "Portraits",
     src: "/assets/portraits/portraits-cover.jpg",
-    number: 12,
+    number: 11,
     slug: "/works/2",
     pictures: [
       "/assets/portraits/portraits1.jpg",

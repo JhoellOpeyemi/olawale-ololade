@@ -28,22 +28,25 @@ const About = () => {
   return (
     <div className="about-container" ref={aboutRef}>
       <p className="about-text text-1">
-        Ckdvhkv duwvi d i iiw ii iwd oev bvvv chdcvd dvwdv owvwvow vwvw vow
-        vocwvo vowoc vo vvoovoveoovi hov ovow vowov 90vwvwv wvalcadnkcbakc
-        auctufdcehcep clicohcohoo vohl c ac cljpcjpcv cjcpwp diviwuhvo owvo o
-        owowcodoc oco
+        Through surrealist portraiture, I explore the enigmatic nature of the
+        unseen world. My subjects, veiled in metaphorical sense, represent the
+        elusive and indescribable aspects of existence. While we may be aware of
+        their presence, their true essence remains hidden, a mystery that
+        continues to intrigue and perplex us.
       </p>
       <p className="about-text text-2">
-        Ckdvhkv duwvi d i iiw ii iwd oev bvvv chdcvd dvwdv owvwvow vwvw vow
-        vocwvo vowoc vo vvoovoveoovi hov ovow vowov 90vwvwv wvalcadnkcbakc
-        auctufdcehcep clicohcohoo vohl c ac cljpcjpcv cjcpwp diviwuhvo owvo o
-        owowcodoc oco
+        Influenced by a lifelong fascination with the spiritual and the
+        paranormal, my work draws on insights from personal experiences and a
+        unique religious upbringing. This background has shaped my understanding
+        of the unseen world and the profound mysteries beyond our ordinary
+        perception
       </p>
       <p className="about-text text-3">
-        Ckdvhkv duwvi d i iiw ii iwd oev bvvv chdcvd dvwdv owvwvow vwvw vow
-        vocwvo vowoc vo vvoovoveoovi hov ovow vowov 90vwvwv wvalcadnkcbakc
-        auctufdcehcep clicohcohoo vohl c ac cljpcjpcv cjcpwp diviwuhvo owvo o
-        owowcodoc oco
+        By obscuring the identity of my subjects, I invite viewers to
+        contemplate the universal human experience of grappling with the
+        unknown. These portraits evoke a sense of &apos;what is&apos;, prompting
+        us to question our perceptions and the tangible and intangible
+        boundaries.
       </p>
     </div>
   );

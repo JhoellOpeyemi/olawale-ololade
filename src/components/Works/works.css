@@ -23,6 +23,10 @@
   background-color: var(--color-bg);
 }
 
+.work-wrapper:not(:first-child) {
+  clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+}
+
 .title-n-progress {
   position: relative;
   display: flex;

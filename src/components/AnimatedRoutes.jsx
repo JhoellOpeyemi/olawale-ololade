@@ -4,6 +4,7 @@ import Home from "../routes/Home";
 import Gallery from "../routes/Gallery";
 import Error from "./Error";
 import SmoothScroll from "./SmoothScroll";
+import Slider from "../routes/Slider";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -15,6 +16,7 @@ const AnimatedRoutes = () => {
           <Route path="/" errorElement={<Error />}>
             <Route path="/" element={<Home />} />
             <Route path="/works/:id" element={<Gallery />} />
+            <Route path="/works/:id/slider" element={<Slider />} />
           </Route>
         </Routes>
       </AnimatePresence>

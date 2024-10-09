@@ -16,12 +16,12 @@
   gap: 0.2rem;
   user-select: none;
   z-index: 2;
-  mix-blend-mode: multiply;
+  mix-blend-mode: difference;
   padding: 0 1.5rem;
 }
 
 .hero-heading {
-  font-size: clamp(var(--small-heading), 6vw + 0.5rem, var(--big-heading));
+  font-size: clamp(var(--small-heading), 7vw + 0.5rem, var(--big-heading));
   font-family: "Forum";
   font-weight: 400;
   text-transform: uppercase;

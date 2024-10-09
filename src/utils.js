@@ -1,4 +1,7 @@
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const timeline = (visible, hidden, state) => {
   const tl = gsap.timeline();
@@ -50,4 +53,29 @@ export const handleLeave = (e) => {
   const hidden = gsap.utils.toArray(e.target.querySelectorAll(".hidden span"));
 
   timeline(visible, hidden, "leave");
+};
+
+export const horizontalScroll = (container) => {
+  const getScrollAmount = () => {
+    const containerWidth = container.current.offsetWidth;
+    console.log(container.current.offsetWidth);
+    return -(containerWidth - window.innerWidth);
+  };
+
+  const tween = gsap.to(container.current, {
+    x: getScrollAmount,
+    ease: "none",
+  });
+
+  ScrollTrigger.create({
+    trigger: container.current,
+    start: "top top",
+    end: () => `+${getScrollAmount()} `,
+    pin: true,
+    pinSpacing: true,
+    animation: tween,
+    scrub: 2.4,
+    markers: true,
+    invalidateOnRefresh: true,
+  });
 };

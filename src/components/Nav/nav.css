@@ -12,27 +12,7 @@
   transition: 0.5s;
 }
 
-.nav-link {
-  position: relative;
-  overflow: hidden;
-  font-size: clamp(var(--small-text), 2vw + 0.1rem, var(--medium-text));
-}
-
-.nav-link .visible {
-  position: relative;
-  pointer-events: none;
-}
-
-.nav-link .hidden {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  pointer-events: none;
-}
-
-.nav-link .visible span,
-.nav-link .hidden span {
-  display: inline-block;
+.nav .nav-link {
   position: relative;
 }
 
