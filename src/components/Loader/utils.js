@@ -19,9 +19,8 @@ export const images = [
 export const imagesArray = [
   "/assets/realms/realms1.jpg",
   "/assets/clients/clients13.jpg",
-  "/assets/portraits/portraits2.jpg",
-  "/assets/painterly/painterly-rootie.jpg",
-  "/assets/clients/clients7.jpg",
+  "/assets/portraits/portraits3.jpg",
+  "/assets/painterly/painterly-unknown.jpg",
 ];
 
 export const loadingAnimation = (tl, setLoader) => {
