@@ -14,5 +14,8 @@ export const galleryReveal = (tl, images) => {
         ease: "power4.inOut",
       },
       "-=0.5"
-    );
+    )
+    .to(".other-works-container", {
+      opacity: 1,
+    });
 };

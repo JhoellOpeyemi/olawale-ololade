@@ -20,11 +20,13 @@ export const imagesArray = [
   "/assets/realms/realms1.jpg",
   "/assets/clients/clients13.jpg",
   "/assets/portraits/portraits2.jpg",
+  "/assets/painterly/painterly-rootie.jpg",
+  "/assets/clients/clients7.jpg",
 ];
 
 export const loadingAnimation = (tl, setLoader) => {
   tl.current = gsap
-    .timeline({ defaults: { ease: "power1.in" } })
+    .timeline({ defaults: { ease: "power1.inOut" } })
     .to(".loader-percentage", { opacity: 0, duration: 0.3 })
     .to(".loader-images-container", {
       clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
@@ -34,8 +36,7 @@ export const loadingAnimation = (tl, setLoader) => {
     .to(".loader-image-wrapper", {
       clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
       duration: 1,
-      stagger: -1.3,
-      delay: 0.5,
+      stagger: -1,
     })
     .to(".page-revealer", {
       clipPath: "polygon(0% 49.5%, 100% 49.5%, 100% 50%, 0% 50%)",
@@ -45,8 +46,8 @@ export const loadingAnimation = (tl, setLoader) => {
     .to(".page-revealer", {
       clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
       duration: 1,
-      ease: "power3.inOut",
-      delay: 0.75,
+      ease: "power4.inOut",
+      delay: 0.5,
     })
     .to(
       ".loader-container",

@@ -6,6 +6,9 @@ export const WorksContext = createContext();
 const selectedFromStorage = JSON.parse(
   localStorage.getItem("selected") || "{}"
 );
+const indexFromStorage = JSON.parse(
+  localStorage.getItem("index-of-selected") || "0"
+);
 
 export const WorksProvider = ({ children }) => {
   const initialLoader = false;
@@ -15,9 +18,11 @@ export const WorksProvider = ({ children }) => {
   const [scrollOrientation, setScrollOrientation] = useState("vertical");
   const [clickedIndex, setClickedIndex] = useState();
   const [mobile] = useState(window.innerWidth > 768 ? false : true);
+  const [indexOfSelected, setIndexOfSelected] = useState(indexFromStorage);
 
   useEffect(() => {
     localStorage.setItem("selected", JSON.stringify(selected));
+    localStorage.setItem("index-of-selected", JSON.stringify(indexOfSelected));
   });
 
   return (
@@ -32,6 +37,8 @@ export const WorksProvider = ({ children }) => {
         clickedIndex,
         setClickedIndex,
         mobile,
+        indexOfSelected,
+        setIndexOfSelected,
       }}
     >
       {children}

@@ -50,6 +50,8 @@
     top: 210%;
     left: 50%;
     transform: translate(-50%);
+    width: 100%;
+    text-align: center;
     opacity: 0;
     pointer-events: none;
     transition: all 0.5s;
@@ -69,5 +71,9 @@
   .nav {
     top: 3.5rem;
     gap: 4rem;
+  }
+
+  .nav-link.small-link:not(:last-child) {
+    margin-right: 1rem;
   }
 }

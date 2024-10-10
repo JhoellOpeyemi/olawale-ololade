@@ -5,10 +5,11 @@ import PropTypes from "prop-types";
 import { WorksContext } from "../../context";
 
 const DesktopWork = ({ work, index, data }) => {
-  const { setSelected } = useContext(WorksContext);
+  const { setSelected, setIndexOfSelected } = useContext(WorksContext);
 
   const handleClick = (work) => {
     setSelected(work);
+    setIndexOfSelected(index);
   };
 
   return (

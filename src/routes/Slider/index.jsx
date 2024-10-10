@@ -7,6 +7,7 @@ import gsap from "gsap";
 import { handleHover, handleLeave } from "../../utils";
 import { WorksContext } from "../../context";
 import AnimatedLayout from "../../components/AnimatedLayout";
+import SplitText from "../../components/SplitText";
 
 import "./slider.css";
 import { sliderReveal } from "./utils";
@@ -46,24 +47,24 @@ const Slider = () => {
       setTimeout(() => {
         lenis?.scrollTo(pos.left - 100, {
           lock: true,
-          duration: `${clickedIndex + 1}` * 0.5,
+          duration: `${clickedIndex + 1}` * 0.25,
         });
-      }, 1000);
+      }, 800);
     }
     if (mobile == true) {
       setTimeout(() => {
-        lenis?.scrollTo(pos.top - 100, {
+        lenis?.scrollTo(pos.top - 90, {
           lock: true,
-          duration: `${clickedIndex + 1}` * 0.75,
+          duration: `${clickedIndex + 1}` * 0.5,
         });
-      }, 1000);
+      }, 800);
     }
   });
 
   useGSAP(() => {
     const images = gsap.utils.toArray(".slider-image-wrapper");
 
-    sliderReveal(tl, images);
+    sliderReveal(tl, images, clickedIndex);
   }, [{ scope: imageSliderRef.current }]);
 
   return (
@@ -76,20 +77,7 @@ const Slider = () => {
             onMouseOver={(e) => handleHover(e)}
             onMouseLeave={(e) => handleLeave(e)}
           >
-            <span className="visible">
-              <span>C</span>
-              <span>l</span>
-              <span>o</span>
-              <span>s</span>
-              <span>e</span>
-            </span>
-            <span className="hidden">
-              <span>C</span>
-              <span>l</span>
-              <span>o</span>
-              <span>s</span>
-              <span>e</span>
-            </span>
+            <SplitText text="Close" />
           </Link>
 
           <div className="slider-container">
