@@ -73,7 +73,7 @@ const Hero = () => {
         >
           Olawale Ololade
         </h1>
-        <h3 className="hero-subheading">Photographer, NFT Creator</h3>
+        <h3 className="hero-subheading">Fine Art Photographer</h3>
       </div>
 
       <div className="image-wrapper" aria-hidden="true" ref={imageRef}>

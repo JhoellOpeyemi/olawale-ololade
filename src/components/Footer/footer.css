@@ -1,0 +1,29 @@
+.footer {
+  width: 100%;
+  padding: 2rem 0;
+  text-align: center;
+  border-top: 1px solid var(--color-light-text);
+  margin-top: 5rem;
+}
+
+.footer-link {
+  display: inline-block;
+  overflow: hidden;
+  color: var(--color-light-text);
+  font-size: clamp(var(--small-text), 2vw + 0.1rem, var(--medium-text));
+}
+
+.footer-link.small-link {
+  position: relative;
+  font-size: 1rem;
+}
+
+.footer-link.small-link:not(:last-child) {
+  margin-right: 2.5rem;
+}
+
+@media screen and (max-width: 425px) {
+  .footer-link.small-link:not(:last-child) {
+    margin-right: 1.25rem;
+  }
+}

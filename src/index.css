@@ -25,7 +25,7 @@
 :root {
   --small-text: 1rem;
   --medium-text: 1.15rem;
-  --big-text: 1.35rem;
+  --big-text: 1.45rem;
   --small-heading: 2.8rem;
   --medium-heading: 3.25rem;
   --big-heading: 7rem;
@@ -33,6 +33,7 @@
   --color-text: #222;
   --color-light-text: #888;
   --color-loader-bg: #1c1c1c;
+  --color-dark-loader-bg: #0f0f0f;
 }
 
 *,
@@ -85,6 +86,11 @@ img {
   display: block;
 }
 
+button {
+  all: unset;
+  cursor: pointer;
+}
+
 .container {
   position: relative;
   width: 90%;
@@ -102,6 +108,7 @@ img {
 }
 
 .nav-link {
+  display: inline-block;
   overflow: hidden;
   font-size: clamp(var(--small-text), 2vw + 0.1rem, var(--medium-text));
 }

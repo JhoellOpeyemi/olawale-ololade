@@ -4,6 +4,7 @@ import Nav from "../components/Nav";
 import Hero from "../components/Hero";
 import Works from "../components/Works";
 import About from "../components/About";
+import Footer from "../components/Footer";
 import Loader from "../components/Loader";
 import AnimatedLayout from "../components/AnimatedLayout";
 import { WorksContext } from "../context";
@@ -23,6 +24,7 @@ const Home = () => {
               <Hero />
               <Works />
               <About />
+              <Footer />
             </div>
           </>
         </AnimatedLayout>

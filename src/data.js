@@ -126,3 +126,19 @@ export const data = [
     ],
   },
 ];
+
+export const contactLinks = [
+  {
+    platform: "Twitter",
+    link: "https://x.com/olawaleololade_?t=P8vfya2jVfrfquaUX3sEIQ&s=09",
+  },
+  {
+    platform: "Instagram",
+    link: "https://instagram.com/ololade_wale?igsh=OGo4dHNpb2hqbmtm",
+  },
+  {
+    platform: "Tiktok",
+    link: "https://tiktok.com/@olawale_ololade?_t=8qPslpNoBr4&_r=1",
+  },
+  { platform: "Mail", link: "mailto:olawaleololade08@gmail.com" },
+];

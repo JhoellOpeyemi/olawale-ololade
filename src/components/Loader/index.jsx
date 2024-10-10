@@ -2,7 +2,7 @@ import { useState, useRef, useEffect, useContext } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
-import { percentageArray, images, loadingAnimation } from "./utils";
+import { percentageArray, imagesArray, loadingAnimation } from "./utils";
 import "./loader.css";
 import { WorksContext } from "../../context";
 
@@ -23,7 +23,7 @@ const Loader = () => {
       promise = promise.then(() => {
         setPercentageText(percent);
         return new Promise((resolve) => {
-          setTimeout(resolve, 850);
+          setTimeout(resolve, 600);
         });
       });
     });
@@ -43,40 +43,15 @@ const Loader = () => {
     <div className="loader-container" ref={loaderRef}>
       <p className="loader-percentage">{percentageText}%</p>
 
-      <div className="loader-images" aria-hidden="true">
-        <div className="row row-1">
-          {images.row1.map((src, index) => {
-            return (
-              <div className="loader-image" key={index}>
-                <img src={src} alt="" />
-                <div className="loader-image-overlay" />
-              </div>
-            );
-          })}
-        </div>
-
-        <div className="row row-2">
-          {images.row2.map((src, index) => {
-            return (
-              <div className="loader-image" key={index}>
-                <img src={src} alt="" />
-                <div className="loader-image-overlay" />
-              </div>
-            );
-          })}
-        </div>
-
-        <div className="row row-3">
-          {images.row3.map((src, index) => {
-            return (
-              <div className="loader-image" key={index}>
-                <img src={src} alt="" />
-                <div className="loader-image-overlay" />
-              </div>
-            );
-          })}
-        </div>
+      <div className="loader-images-container" aria-hidden="true">
+        {imagesArray.map((image, index) => (
+          <div className="loader-image-wrapper" key={index}>
+            <img src={image} alt="" />
+          </div>
+        ))}
       </div>
+
+      <div className="page-revealer" />
     </div>
   );
 };

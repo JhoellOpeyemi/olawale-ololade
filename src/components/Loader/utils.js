@@ -1,73 +1,58 @@
 import gsap from "gsap";
 
-export const percentageArray = [0, 0, 13, 18, 35, 49, 62, 77, 89, 100];
+export const percentageArray = [
+  0, 0, 8, 15, 23, 30, 42, 49, 60, 68, 77, 85, 93, 100,
+];
 
-export const images = {
-  row1: [
-    "/assets/clients/clients-cover.jpg",
-    "/assets/portraits/portraits1.jpg",
-    "/assets/grad/graduation-cover.jpg",
-  ],
-  row2: [
-    "/assets/clients/clients13.jpg",
-    "/assets/realms/realms3.jpg",
-    "/assets/portraits/portraits4.jpg",
-  ],
-  row3: [
-    "/assets/clients/clients7.jpg",
-    "/assets/realms/realms7.jpg",
-    "/assets/painterly/painterly-lucynder.jpg",
-  ],
-};
+export const images = [
+  "/assets/clients/clients-cover.jpg",
+  "/assets/portraits/portraits1.jpg",
+  "/assets/grad/graduation-cover.jpg",
+  "/assets/clients/clients13.jpg",
+  "/assets/realms/realms3.jpg",
+  "/assets/portraits/portraits4.jpg",
+  "/assets/clients/clients7.jpg",
+  "/assets/realms/realms7.jpg",
+  "/assets/painterly/painterly-lucynder.jpg",
+];
+
+export const imagesArray = [
+  "/assets/realms/realms1.jpg",
+  "/assets/clients/clients13.jpg",
+  "/assets/portraits/portraits2.jpg",
+];
 
 export const loadingAnimation = (tl, setLoader) => {
   tl.current = gsap
-    .timeline()
+    .timeline({ defaults: { ease: "power1.in" } })
     .to(".loader-percentage", { opacity: 0, duration: 0.3 })
-    .to(".row-1 .loader-image", {
-      left: 0,
-      duration: 2.5,
-      stagger: 0.2,
-      ease: "power4.inOut",
+    .to(".loader-images-container", {
+      clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+      duration: 1,
+      delay: 0.2,
+    })
+    .to(".loader-image-wrapper", {
+      clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+      duration: 1,
+      stagger: -1.3,
+      delay: 0.5,
+    })
+    .to(".page-revealer", {
+      clipPath: "polygon(0% 49.5%, 100% 49.5%, 100% 50%, 0% 50%)",
+      duration: 0.5,
+      delay: 0.2,
+    })
+    .to(".page-revealer", {
+      clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+      duration: 1,
+      ease: "power3.inOut",
+      delay: 0.75,
     })
     .to(
-      ".row-2 .loader-image",
-      {
-        left: 0,
-        duration: 2.5,
-        stagger: -0.2,
-        ease: "power4.inOut",
-      },
-      "-=3"
-    )
-    .to(
-      ".row-3 .loader-image",
-      {
-        left: 0,
-        duration: 2.5,
-        stagger: 0.2,
-        ease: "power4.inOut",
-      },
-      "-=3"
-    )
-    .to(
       ".loader-container",
       {
-        scale: 5,
-        duration: 3,
-        ease: "power4.inOut",
+        onUpdate: () => setLoader(false),
       },
-      "-=1.6"
-    )
-    .to(
-      ".loader-container",
-      {
-        opacity: 0,
-        duration: 1,
-      },
-      "-=1.3"
-    )
-    .to(".loader-container", {
-      onUpdate: () => setLoader(false),
-    });
+      "-=0.15"
+    );
 };
