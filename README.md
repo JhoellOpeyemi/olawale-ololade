@@ -1,8 +1,27 @@
-# React + Vite
+# Minimalist Portfolio Website for Olawale Ololade
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+A responsive portfolio website designed for Olawale to showcase his work. The site highlights projects across categories (portraits, surrealism, painterly and more) with a focus on minimalist layout.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+
+- Interactive image galleries with smooth transitions
+- Organized project categories
+- Responsive design optimized for desktop and mobile
+- Image optimization for fast loading
+
+## Tech Stack
+
+- Frontend: React, CSS, GSAP, Framer Motion
+- Deployment: Netlify
+
+## Screenshots
+
+![Hero Section Screenshot](./public/assets/screenshots/olawale1.png)
+![Work Section Screenshot](./public/assets/screenshots/olawale2.png)
+![Gallery Page Screenshot](./public/assets/screenshots/olawale3.png)
+
+## Live Site
+
+[Visit Live Site](https://olawale-ololade.netlify.app)
