@@ -41,17 +41,19 @@ const Loader = () => {
 
   return (
     <div className="loader-container" ref={loaderRef}>
-      <p className="loader-percentage">{percentageText}%</p>
+      <div className="loader-content-wrapper">
+        <p className="loader-percentage">{percentageText}%</p>
 
-      <div className="loader-images-container" aria-hidden="true">
-        {imagesArray.map((image, index) => (
-          <div className="loader-image-wrapper" key={index}>
-            <img src={image} alt="" />
-          </div>
-        ))}
+        <div className="loader-images-container" aria-hidden="true">
+          {imagesArray.map((image, index) => (
+            <div className="loader-image-wrapper" key={index}>
+              <img src={image} alt="" />
+            </div>
+          ))}
+        </div>
+
+        <div className="page-revealer" />
       </div>
-
-      <div className="page-revealer" />
     </div>
   );
 };
