@@ -18,26 +18,15 @@ const MobileWork = ({ work, index, data }) => {
         to={work.slug}
         className="work-image-wrapper"
         onClick={() => handleClick(work)}
+        aria-label={`View ${work.title} images`}
       >
         <img src={work.src} alt="" />
         <div className="overlay" />
       </Link>
 
       <div className="title-n-number">
-        <Link
-          to={work.slug}
-          className="work-title work-text"
-          onClick={() => handleClick(work)}
-        >
-          {work.title}
-        </Link>
-        <Link
-          to={work.slug}
-          className="work-images-number work-text"
-          onClick={() => handleClick(work)}
-        >
-          {work.number} Pictures
-        </Link>
+        <p className="work-title work-text">{work.title}</p>
+        <p className="work-images-number work-text">{work.number} Pictures</p>
       </div>
 
       <p className="progress">

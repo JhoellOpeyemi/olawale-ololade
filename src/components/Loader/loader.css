@@ -4,6 +4,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
+  height: 100svh;
   background-color: var(--color-loader-bg);
   color: var(--color-bg);
   display: flex;
@@ -16,9 +17,9 @@
 
 .loader-percentage {
   position: absolute;
-  right: 9rem;
-  bottom: 4rem;
-  font-size: clamp(5rem, 10vw + 0.5rem, 10rem);
+  left: 5%;
+  bottom: 0;
+  font-size: clamp(3rem, 10vw + 0.5rem, 8rem);
   font-family: "Forum";
 }
 

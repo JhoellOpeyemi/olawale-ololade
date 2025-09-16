@@ -48,6 +48,7 @@ const Nav = () => {
     <nav className="nav" ref={navRef}>
       <div className="links-group-wrapper works-wrapper">
         <a
+          href="#work"
           className="nav-link big-link"
           onMouseOver={(e) => handleHover(e)}
           onMouseLeave={(e) => handleLeave(e)}

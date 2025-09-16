@@ -5,6 +5,8 @@ export const data = [
     src: "/assets/realms/realms-cover.jpg",
     number: 8,
     slug: "/works/1",
+    story:
+      "A dive into the surreal — where ordinary settings twist and reality bends into imagination. These works are meant to challenge perception, inviting the viewer to see beyond what is familiar.",
     pictures: [
       "/assets/realms/realms1.jpg",
       "/assets/realms/realms2.jpg",
@@ -22,6 +24,8 @@ export const data = [
     src: "/assets/portraits/portraits-cover.jpg",
     number: 11,
     slug: "/works/2",
+    story:
+      "Every face has a story and every glance holds a truth. These portraits capture fleeting emotions and intimate details, preserving raw expressions that words could never fully describe.",
     pictures: [
       "/assets/portraits/portraits1.jpg",
       "/assets/portraits/portraits2.jpg",
@@ -42,6 +46,8 @@ export const data = [
     src: "/assets/painterly/painterly-cover.jpg",
     number: 7,
     slug: "/works/3",
+    story:
+      "Inspired by brushstrokes and classic artistry, these images merge photography with the feel of paintings. Through light, texture, and color, each frame becomes a living canvas",
     pictures: [
       "/assets/painterly/painterly-lucynder.jpg",
       "/assets/painterly/painterly-adams.jpg",
@@ -58,6 +64,8 @@ export const data = [
     src: "/assets/grad/graduation-cover.jpg",
     number: 14,
     slug: "/works/4",
+    story:
+      "Moments of achievement and transition, filled with pride, relief, and excitement for what's ahead. These shoots capture not just the cap and gown but the spirit of stepping boldly into the future.",
     pictures: [
       "/assets/grad/graduation1.jpg",
       "/assets/grad/graduation2.jpg",
@@ -81,6 +89,8 @@ export const data = [
     src: "/assets/mobile/mobile-photo-cover.jpg",
     number: 4,
     slug: "/works/5",
+    story:
+      "Simple tools, profound stories. Using just a mobile lens, these images celebrate the dignity, resilience, and timeless wisdom etched in the faces of the elderly.",
     pictures: [
       "/assets/mobile/mobile-photo1.jpg",
       "/assets/mobile/mobile-photo2.jpg",
@@ -94,6 +104,8 @@ export const data = [
     src: "/assets/clients/clients-cover.jpg",
     number: 14,
     slug: "/works/6",
+    stroy:
+      "Every client has a vision, my role is to translate it into images that tell their story. From concept to final frame, these works reflect collaboration, trust, and creativity tailored to individual needs.",
     pictures: [
       "/assets/clients/clients1.jpg",
       "/assets/clients/clients2.jpg",
@@ -117,6 +129,8 @@ export const data = [
     src: "/assets/events/events-cover.jpg",
     number: 5,
     slug: "/works/7",
+    story:
+      "Each photograph in this collection is a memory preserved — the laughter, the quiet tears, and the moments that linger long after the celebration ends.",
     pictures: [
       "/assets/events/events1.jpg",
       "/assets/events/events2.jpg",

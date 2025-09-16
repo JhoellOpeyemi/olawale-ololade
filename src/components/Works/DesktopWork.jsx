@@ -15,13 +15,9 @@ const DesktopWork = ({ work, index, data }) => {
   return (
     <div className="work-wrapper">
       <div className="title-n-progress">
-        <Link
-          to={work.slug}
-          className="work-title work-text"
-          onClick={() => handleClick(work)}
-        >
+        <p className="work-title work-text">
           <span>{work.title}</span>
-        </Link>
+        </p>
         <p className="progress">
           0{index + 1} / 0{data.length}
         </p>
@@ -30,17 +26,12 @@ const DesktopWork = ({ work, index, data }) => {
         to={work.slug}
         className="work-image-wrapper"
         onClick={() => handleClick(work)}
+        aria-label={`View ${work.title} images`}
       >
         <img src={work.src} alt="" />
         <div className="overlay" />
       </Link>
-      <Link
-        to={work.slug}
-        className="work-images-number work-text"
-        onClick={() => handleClick(work)}
-      >
-        {work.number} Pictures
-      </Link>
+      <p className="work-images-number work-text">{work.number} Pictures</p>
     </div>
   );
 };

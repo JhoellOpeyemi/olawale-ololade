@@ -9,28 +9,28 @@ const timeline = (visible, hidden, state) => {
   if (state == "hover") {
     tl.to(visible, {
       y: "-100%",
-      duration: 0.2,
-      stagger: 0.02,
+      duration: 0.15,
+      stagger: 0.01,
     }).to(
       hidden,
       {
         y: "-100%",
-        duration: 0.2,
-        stagger: 0.02,
+        duration: 0.15,
+        stagger: 0.01,
       },
       "<"
     );
   } else {
     tl.to(hidden, {
       y: "0",
-      duration: 0.2,
-      stagger: 0.02,
+      duration: 0.15,
+      stagger: 0.01,
     }).to(
       visible,
       {
         y: "0",
-        duration: 0.2,
-        stagger: 0.02,
+        duration: 0.15,
+        stagger: 0.01,
       },
       "<"
     );

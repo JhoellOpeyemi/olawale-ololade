@@ -23,7 +23,7 @@ const Loader = () => {
       promise = promise.then(() => {
         setPercentageText(percent);
         return new Promise((resolve) => {
-          setTimeout(resolve, 600);
+          setTimeout(resolve, 500);
         });
       });
     });

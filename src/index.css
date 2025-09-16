@@ -4,6 +4,7 @@
     url("/fonts/helvetica-bold-webfont.woff") format("woff");
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -12,6 +13,7 @@
     url("/fonts/helvetica-webfont.woff") format("woff");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -20,6 +22,7 @@
     url("/fonts/forum-regular-webfont.woff") format("woff");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 :root {
@@ -72,6 +75,11 @@ a {
   text-decoration: none;
   color: inherit;
   cursor: pointer;
+  border: 2px solid transparent;
+}
+
+a:focus-visible {
+  border-color: red;
 }
 
 p {
@@ -111,6 +119,11 @@ button {
   display: inline-block;
   overflow: hidden;
   font-size: clamp(var(--small-text), 2vw + 0.1rem, var(--medium-text));
+  border: 1px solid transparent;
+}
+
+.nav-link:focus-visible {
+  border-color: var(--color-dark-loader-bg);
 }
 
 .nav-link .visible {

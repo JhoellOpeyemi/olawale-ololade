@@ -55,7 +55,7 @@ const Slider = () => {
       setTimeout(() => {
         lenis?.scrollTo(pos.top - 90, {
           lock: true,
-          duration: `${clickedIndex + 1}` * 0.5,
+          duration: `${clickedIndex + 1}` * 0.25,
         });
       }, 800);
     }

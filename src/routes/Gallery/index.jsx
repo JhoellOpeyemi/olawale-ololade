@@ -53,8 +53,8 @@ const Gallery = () => {
   useEffect(() => {
     setTimeout(() => {
       lenis?.scrollTo(0, { immediate: true });
-    }, 400);
-  });
+    }, 50);
+  }, []);
 
   useGSAP(() => {
     const images = gsap.utils.toArray(".gallery-image-wrapper");
@@ -78,14 +78,7 @@ const Gallery = () => {
             <div className="gallery-wrapper">
               <div className="gallery-text">
                 <h2>{selected.title}</h2>
-                <p className="story">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Suscipit illo doloremque sed! Eaque at blanditiis, impedit
-                  corrupti expedita mollitia culpa ea necessitatibus fugiat
-                  totam ullam sit cum eius nisi, aut nobis minus incidunt quos
-                  neque dolorum aperiam natus ipsum! Quasi dolore sequi fuga
-                  illo debitis saepe ad quaerat ipsa?0
-                </p>
+                <p className="story">{selected.story}</p>
               </div>
 
               <div className="gallery-images-container">
@@ -95,6 +88,7 @@ const Gallery = () => {
                     className="gallery-image-wrapper"
                     key={index}
                     onClick={() => openSlider(index)}
+                    aria-label="View image"
                   >
                     <img src={image} alt="" className="gallery-image" />
                   </Link>
@@ -113,19 +107,14 @@ const Gallery = () => {
                       handleClick(previousWork, indexOfSelected - 1)
                     }
                     className="other-works-image-wrapper"
+                    aria-label={previousWork.title}
                   >
                     <img src={previousWork.src} alt="" />
                   </Link>
-                  <Link
-                    to={previousWork.slug}
-                    onClick={() =>
-                      handleClick(previousWork, indexOfSelected - 1)
-                    }
-                    className="other-works-text"
-                  >
+                  <div className="other-works-text">
                     <h3>{previousWork.title}</h3>
                     <p>{previousWork.number} Pictures</p>
-                  </Link>
+                  </div>
                 </>
               )}
             </div>
@@ -137,17 +126,14 @@ const Gallery = () => {
                     className="other-works-image-wrapper"
                     to={nextWork.slug}
                     onClick={() => handleClick(nextWork, indexOfSelected + 1)}
+                    aria-label={nextWork.title}
                   >
                     <img src={nextWork.src} alt="" />
                   </Link>
-                  <Link
-                    className="other-works-text"
-                    to={nextWork.slug}
-                    onClick={() => handleClick(nextWork, indexOfSelected + 1)}
-                  >
+                  <div className="other-works-text">
                     <h3>{nextWork.title}</h3>
                     <p>{nextWork.number} Pictures</p>
-                  </Link>
+                  </div>
                 </>
               )}
             </div>
